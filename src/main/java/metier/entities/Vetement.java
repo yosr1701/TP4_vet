@@ -2,8 +2,20 @@ package metier.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "VETEMENT")
 public class Vetement implements Serializable {
+	
+	@Id
+	@Column(name = "IDVET")
     private Long idVet;
+	
+	@Column(name = "NOMVET")
     private String nomVet;
     private String taille;
     private double prix;
